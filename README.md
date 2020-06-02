@@ -1,6 +1,6 @@
 # React PlaceMoulder
 React Place Moulder uses existing component structure to render loading skeletons without writing extra code.
-Click here for [Live Demo](https://mrq2t.csb.app/) and for code click [Sandbox Link](https://codesandbox.io/s/stensils-mrq2t?file=/src/examples/whatsapp/dummy-data.js:20-213)
+Click here for [Live Demo](https://mrq2t.csb.app/) and for code click [Sandbox Link](https://codesandbox.io/s/stensils-mrq2t)
 
 ### Installation
 Install using `npm run --save react-placemoulder`
