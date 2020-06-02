@@ -1,6 +1,6 @@
 {
   "name": "react-placemoulder",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Reuse the existing components to create loading state placeholders.",
   "main": "dist/index.js",
   "scripts": {
@@ -23,8 +23,15 @@
     "Placemoulder",
     "Philosophy"
   ],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vihangpatel/react-placemoulder.git"
+  },
   "author": "Vihang Patel",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-react": "^7.10.1",
     "@babel/cli": "^7.0.0",
