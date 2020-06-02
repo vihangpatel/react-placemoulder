@@ -1,0 +1,32 @@
+{
+  "name": "react-placemoulder",
+  "version": "1.0.4",
+  "description": "Reuse the existing components to create loading state placeholders.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel src --out-dir dist --copy-files"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "keywords": [
+    "React",
+    "React",
+    "Placeholder",
+    "Easy",
+    "Placeholders",
+    "Mould",
+    "placeholder",
+    "Placemoulder",
+    "Philosophy"
+  ],
+  "author": "Vihang Patel",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0"
+  }
+}
