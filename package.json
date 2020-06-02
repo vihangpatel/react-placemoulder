@@ -1,6 +1,6 @@
 {
   "name": "react-placemoulder",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "Reuse the existing components to create loading state placeholders.",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,8 @@
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "prop-types": "^15.5.7"
   },
   "keywords": [
     "React",

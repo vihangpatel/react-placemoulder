@@ -1,0 +1,92 @@
+
+
+.enable-stensil {
+    pointer-events: none;
+  }
+
+
+  .enable-stensil .stensil {
+    background: #eee !important;
+    margin: 2px 0;
+    color: #eee !important;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border: none;
+    box-shadow: none;
+  }
+
+  .enable-stensil .stensil *,   .enable-stensil .stensil *::after {
+    fill:#eee !important;
+    border: none !important;
+    background: #eee !important;
+    box-shadow: none !important;
+    color: #eee !important;
+  }
+
+  .enable-stensil .stensil-svg * {
+    fill:#eee !important;
+  }
+
+  .enable-stensil .stensil-ignore {
+    visibility: hidden;
+  }
+
+  .enable-stensil .stensil-dark {
+    background: #eee;
+  }
+
+  .enable-stensil .stensil-para {
+    text-align: left;
+  }
+
+  .enable-stensil .stensil-para .stensil {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 6px;
+  }
+
+  .enable-stensil .stensil-para .stensil:nth-child(2n) {
+    width: 95%;
+  }
+
+  .enable-stensil .stensil-para {
+    background: white;
+    line-height: 8px;
+  }
+
+  .enable-stensil .stensil-para .half {
+    width: 30%;
+  }
+
+  .enable-stensil .stensil::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    -webkit-animation: loading-stensil 1s linear infinite;
+    animation: loading-stensil 1s linear infinite;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
+  }
+
+  @keyframes loading-stensil {
+    0% {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    100% {
+      left: 100%;
+      transform: translateX(0%);
+    }
+  }
+
+  .enable-stensil ul, li {
+    list-style: none;
+  }
