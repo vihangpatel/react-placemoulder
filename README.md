@@ -1,6 +1,13 @@
 # React PlaceMoulder
-React Place Moulder uses existing component structure to render loading skeletons without writing extra code.
+React Place Moulder uses existing component structure to render loading skeletons with very minimal code changess.
 Click here for [Live Demo](https://mrq2t.csb.app/) and for code click [Sandbox Link](https://codesandbox.io/s/stensils-mrq2t)
+This is more of a philosophy which can be extended to any framework in Frontend.
+
+##### GIF - Creating stencils for whatsapp card ( Just adding "required" classes, and skeletons are ready )
+![Class adding Gif](docs/images/stencil.gif?raw=true "Title")
+
+##### GIF - Creating stencils for some interview score card ( Here also, Just adding "required" classes )
+![Class adding Gif](docs/images/stencil-1.gif?raw=true "Title")
 
 ### Installation
 Install using `npm run --save react-placemoulder`
@@ -23,8 +30,8 @@ Install using `npm run --save react-placemoulder`
 |--------------------|----------|-------------------------------------------------------------------|
 | data*           | object   | `data` is dummy or representational data which will be used to determine the dummy space occupied by the DOM element                                       |
 | length               | number   |                      Number of repetitive skeletons required to fill in the placeholder list                                             |
-| schema*          | object   | If `data` is not provided, provide schema of the props required by `Component` prop. |
-| Component   | ReactComponent  | tr`Component` for which we want to generate skeleton on the fly        |
+| schema*          | object   | If `data` is not provided, provide schema of the props required by `Component`. |
+| Component   | ReactComponent  | `Component` for which we want to generate skeleton on the fly        |
 
 ### Stencil
 
@@ -113,11 +120,7 @@ Where your dummy data can be like this:
 };
 ```
 
-##### GIF - Updating whatsapp card ( Just adding "required" classes, and skeletons are ready )
-![Class adding Gif](docs/images/stencil.gif?raw=true "Title")
 
-##### GIF - Updating score card ( Here also, Just adding "required" classes )
-![Class adding Gif](docs/images/stencil-1.gif?raw=true "Title")
-Feel free to report issues.
+#### Feel free to report issues.
 
-Big big thanks to open source community.
+## Big big thanks to open source community.

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test utils should test createObjectFromSchema should create object out schema with different supported data types 1`] = `
+Object {
+  "address": Object {
+    "country": " . . . . . . . . . . . .",
+    "houseNo": " . . . .",
+    "locality": " . . . . . . . . . . . . . . . . . . . .",
+    "state": " . . . . . . . . . . . .",
+    "street": " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+  },
+  "name": " . . . . . . . . . .",
+  "onSelect": [Function],
+  "resident": true,
+}
+`;

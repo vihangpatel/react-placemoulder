@@ -1,18 +1,55 @@
-const REAPEAT_CHAR = ' .';
-export const createObjectFromSchema = schema => {
-  const outputObject = {};
+"use strict";
 
-  for (const key in schema) {
-    const val = schema[key];
+exports.__esModule = true;
+exports.mouldParagraph = exports.createObjectFromSchema = void 0;
+var REAPEAT_CHAR = ' .';
 
-    if (val && typeof val === 'object') {
-      // Recursively create object from schema object
-      outputObject[key] = createObjectFromSchema(val);
-    } else {
-      outputObject[key] = REAPEAT_CHAR.repeat(+val);
+var noop = function noop() {};
+
+var createObjectFromSchema = function createObjectFromSchema(schema) {
+  var outputObject = {};
+
+  for (var key in schema) {
+    var val = schema[key];
+    /** Ignore undefined or null keys and continue */
+
+    if (typeof val === 'undefined' || val === null) {
+      continue;
+    }
+
+    switch (typeof val) {
+      case 'string':
+      case 'number':
+        outputObject[key] = REAPEAT_CHAR.repeat(+val);
+        break;
+
+      case 'function':
+        outputObject[key] = noop;
+        break;
+
+      case 'boolean':
+        outputObject[key] = val;
+        break;
+
+      case 'object':
+        outputObject[key] = createObjectFromSchema(val);
+
+      default:
+        break;
     }
   }
 
   return outputObject;
 };
-export const mouldParagraph = pTags => pTags.map(pTag => pTag.innerHTML = `${[...Array(3)].reduce((resultStr, item) => `${resultStr}<span class="stensil">${' .'.repeat(50)}</span>`, '')}<span class="stensil half"/>`);
+
+exports.createObjectFromSchema = createObjectFromSchema;
+
+var mouldParagraph = function mouldParagraph(pTags) {
+  return pTags.map(function (pTag) {
+    return pTag.innerHTML = Array.apply(null, Array(4)).reduce(function (resultStr, item) {
+      return resultStr + "<span class=\"stensil\">" + ' .'.repeat(50) + "</span>";
+    }, '') + "<span class=\"stensil half\"/>";
+  });
+};
+
+exports.mouldParagraph = mouldParagraph;
