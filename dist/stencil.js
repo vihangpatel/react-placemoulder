@@ -1,47 +1,46 @@
-import React, { useRef, useEffect, useMemo } from 'react';
-import PropTypes from 'prop-types';
-import { mouldParagraph, createObjectFromSchema } from './utils';
-import './stencil.css';
-export const Stencil = ({
-  children
-}) => {
-  const currentRef = useRef(null);
-  useEffect(() => {
-    mouldParagraph([...currentRef.current.querySelectorAll('.stensil-para')]);
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+exports.__esModule = true;
+exports.StencilList = exports.Stencil = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _utils = require("./utils");
+
+require("./stencil.css");
+
+var Stencil = function Stencil(_ref) {
+  var children = _ref.children;
+  var currentRef = (0, _react.useRef)(null);
+  (0, _react.useEffect)(function () {
+    (0, _utils.mouldParagraph)(Array.prototype.slice.call(currentRef.current.querySelectorAll('.stensil-para')));
   }, []);
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "enable-stensil",
     ref: currentRef
   }, children);
 };
-export const StencilList = ({
-  data,
-  length,
-  schema,
-  Component
-}) => {
+
+exports.Stencil = Stencil;
+
+var StencilList = function StencilList(_ref2) {
+  var data = _ref2.data,
+      length = _ref2.length,
+      schema = _ref2.schema,
+      Component = _ref2.Component;
   // Create dummy props if config is provided
-  const dummyProps = data || createObjectFromSchema(schema); // Memoize fakeArray based on length
+  var dummyProps = data || (0, _utils.createObjectFromSchema)(schema); // Memoize fakeArray based on length
 
-  const fakeArray = useMemo(() => [...Array(length)], [length]);
-  return fakeArray.map((_, index) => /*#__PURE__*/React.createElement(Stencil, {
-    key: index
-  }, /*#__PURE__*/React.createElement(Component, dummyProps)));
+  var fakeArray = (0, _react.useMemo)(function () {
+    return Array.apply(null, Array(length));
+  }, [length]);
+  return fakeArray.map(function (_, index) {
+    return /*#__PURE__*/_react["default"].createElement(Stencil, {
+      key: index
+    }, /*#__PURE__*/_react["default"].createElement(Component, dummyProps));
+  });
 };
-Stencil.propTypes = {
-  /** Children whose skeleton is required to be rendered */
-  children: PropTypes.element.isRequired
-};
-StencilList.propTypes = {
-  /** `data` is dummy or representational data which will be used to determine the dummy space occupied by the DOM element */
-  data: PropTypes.object,
 
-  /** Number of repetitive skeletons required to fill in the placeholder list */
-  length: PropTypes.number.isRequired,
-
-  /** If `data` is not provided, provide schema of the props required by `Component` prop. */
-  schema: PropTypes.object,
-
-  /** `Component` for which we want to generate skeleton on the fly  */
-  Component: PropTypes.elementType.isRequired
-};
+exports.StencilList = StencilList;
