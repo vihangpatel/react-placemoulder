@@ -10,19 +10,19 @@ This is more of a philosophy which can be extended to any framework in Frontend.
 ![Class adding Gif](docs/images/stencil-1.gif?raw=true "Title")
 
 ### Installation
-Install using `npm run --save react-placemoulder`
+Install using `npm install  --save  react-placemoulder`
 
 ### Pre-Requisite
 - Works well with `dumb` or `presentational` component.
 - Make sure you do not have any analytics/tracking code in the component
 
 ### Features
-  - Uses exisiting component structure ( provided Component is dumb/presentational as per prerequisite ).
-  - As Component changes, skeleton does not required to be modified as per new design.
+  - Uses exisiting component structure ( provided Component is dumb/presentational).
+  - While Modifying Component, skeleton is not required to be modified as per new design.
 
 ### How it works
   -  Class name `stensil` ( spelling mistake is intentional to avoid accidental clash with correct spelling ) is required to be added to render stencil when the data is being loaded.
-  -  Create a dummy data or Schema exactly how your app would pass to the component
+  -  Create a dummy data or Schema and pass it to your component.
   -  To render loading state of the list, use `StencilList` HOC, or to show loading state of individual component, use `Stencil` HOC. See props table for accetable props.
 
 ### StencilList
@@ -70,7 +70,7 @@ import {
 .... your code ...
 ```
 
-###### 2. To render loading state of the whatsapp card, add `stensil` class name where ever the data will be rendered in DOM.
+###### 2. To render loading state of the whatsapp card, add `stensil` class name to the appropriate DOM element for data to be rendered.
 
 ```
 const WhatsAppCard = props => (
@@ -88,7 +88,7 @@ const WhatsAppCard = props => (
   </div>
 );
 ```
-###### 3. Invoke HOC when the data is being loaded. `wData` is similar in schema with actual data. Its nothing but props object for the `WhatsAppCard`. Alternatively you can use schema.
+###### 3. Invoke HOC when the data is being loaded. `wData` is similar in schema with actual data. Its nothing but props object for the `WhatsAppCard`. Alternatively you can also use schema.
 ```
     {loading ? (
           <StencilList length={3} Component={WhatsAppCard} data={wData} />
