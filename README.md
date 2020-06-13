@@ -1,16 +1,14 @@
-# React PlaceMoulder
+ # React PlaceMoulder
 React Place Moulder uses existing component structure to render loading skeletons with very minimal code changess.
 Click here for [Live Demo](https://mrq2t.csb.app/) and for code click [Sandbox Link](https://codesandbox.io/s/stensils-mrq2t)
 This is more of a philosophy which can be extended to any framework in Frontend.
 
-##### GIF - Creating stencils for whatsapp card ( Just adding "required" classes, and skeletons are ready )
 ![Class adding Gif](docs/images/stencil.gif?raw=true "Title")
 
-##### GIF - Creating stencils for some interview score card ( Here also, Just adding "required" classes )
 ![Class adding Gif](docs/images/stencil-1.gif?raw=true "Title")
 
 ### Installation
-Install using `npm install  --save  react-placemoulder`
+Install using `npm install --save  react-placemoulder`
 
 ### Pre-Requisite
 - Works well with `dumb` or `presentational` component.
@@ -26,18 +24,25 @@ Install using `npm install  --save  react-placemoulder`
   -  To render loading state of the list, use `StencilList` HOC, or to show loading state of individual component, use `Stencil` HOC. See props table for accetable props.
 
 ### StencilList
-| prop               | type    |                                                                   |
-|--------------------|----------|-------------------------------------------------------------------|
-| data*           | object   | `data` is dummy or representational data which will be used to determine the dummy space occupied by the DOM element                                       |
+| prop               | type    |    Description                                                   |
+|--------------------|---------|------------------------------------------------------------------|
+| data*  | object   | `data` is dummy or representational data which will be used to determine the dummy space occupied by the DOM element |
 | length               | number   |                      Number of repetitive skeletons required to fill in the placeholder list                                             |
 | schema*          | object   | If `data` is not provided, provide schema of the props required by `Component`. |
-| Component   | ReactComponent  | `Component` for which we want to generate skeleton on the fly        |
+| Component   | ReactElement<any>   | `Component` for which we want to generate skeleton on the fly        |
+
+### StencilWrapper
+
+| prop               | type     |       Description                                                 |
+|--------------------|----------|-------------------------------------------------------------------|
+| Children           | ReactElement<any>  | Component on which loading state is required                |
+| repeat             | number   | Number of times to repeat the skeleton placeholder |
 
 ### Stencil
 
-| prop               | type     |                                                                   |
+| prop               | type     |       Description                                                 |
 |--------------------|----------|-------------------------------------------------------------------|
-| Children           | ReactComponent | Component on which loading state is required                |
+| Children           | ReactElement<any>  | Component on which loading state is required                |
 
 Available selectors to achieve desired result. Add required class name along with other classes where you want to show loading state.
 
@@ -58,19 +63,20 @@ For that wrap your css under the `.enable-stensil` selector and just use it in y
 
 ## Example
 Follow simple following steps
-###### 1. How to import
+#### 1. Importing
 Refer Live Examples for more clarity
 ```
 import {
-  StencilList,
   Stencil,
+  StencilList,
+  StencilWrapper,
   createObjectFromSchema
 } from "react-placemoulder";
 
 .... your code ...
 ```
 
-###### 2. To render loading state of the whatsapp card, add `stensil` class name to the appropriate DOM element for data to be rendered.
+#### 2. To render loading state of the whatsapp card, add `stensil` class name to the appropriate DOM element for data to be rendered.
 
 ```
 const WhatsAppCard = props => (
@@ -88,7 +94,7 @@ const WhatsAppCard = props => (
   </div>
 );
 ```
-###### 3. Invoke HOC when the data is being loaded. `wData` is similar in schema with actual data. Its nothing but props object for the `WhatsAppCard`. Alternatively you can also use schema.
+#### 3. Invoke HOC when the data is being loaded. `wData` is similar in schema with actual data. Its nothing but props object for the `WhatsAppCard`. Alternatively you can also use schema.
 ```
     {loading ? (
           <StencilList length={3} Component={WhatsAppCard} data={wData} />
@@ -99,7 +105,19 @@ const WhatsAppCard = props => (
         )}
 ```
 
-###### 4. Provide `data` or `schema`. Here `data` takes precedence over schema.
+OR using `StencilWrapper` which accepts only one child
+
+```
+    {loading ? (
+          <StencilWrapper repeat={3}>
+              <WhatsAppCard {...wData} />
+          </StencilWrapper>
+        ) : (
+          ... render your cards
+        )}
+```
+
+#### 4. Provide `data` or `schema`. Here `data` takes precedence over schema.
 Example of schema: Where numbers against prop key indicated average length ( decided by you ) to show the stencil.
 ```
 {
@@ -120,7 +138,9 @@ Where your dummy data can be like this:
 };
 ```
 
-
-#### Feel free to report issues.
-
-## Big big thanks to open source community.
+### More Skeleton Examples
+<p style="display:flex;flex-direction:column;">
+  <img src="docs/images/1.png?raw=true" width="356" height="356">
+  <img src="docs/images/2.png?raw=true" width="356" height="356">
+  <img src="docs/images/3.png?raw=true" width="356" height="356">
+</p>

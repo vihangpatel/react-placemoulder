@@ -6,6 +6,7 @@ var _stencil = require("./stencil");
 
 exports.Stencil = _stencil.Stencil;
 exports.StencilList = _stencil.StencilList;
+exports.StencilWrapper = _stencil.StencilWrapper;
 
 var _utils = require("./utils");
 

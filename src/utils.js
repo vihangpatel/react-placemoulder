@@ -47,3 +47,9 @@ export const mouldParagraph = (pTags) =>
         ''
       )}<span class="stensil half"/>`)
   );
+
+export function createDummyArray(length) {
+  return Array.apply(null, Array(length)).map(function (item, index) {
+    return index;
+  });
+}

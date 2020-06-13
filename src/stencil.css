@@ -70,9 +70,9 @@
     z-index: 1;
     width: 500%;
     margin-left: -250%;
-    -webkit-animation: loading-stensil 1s linear infinite;
-    animation: loading-stensil 1s linear infinite;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
+    -webkit-animation: loading-stensil 1.5s linear infinite;
+    animation: loading-stensil 1.5s linear infinite;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
   }
 
   @keyframes loading-stensil {
