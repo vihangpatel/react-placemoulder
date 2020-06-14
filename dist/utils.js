@@ -1,6 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
+exports.createDummyArray = createDummyArray;
 exports.mouldParagraph = exports.createObjectFromSchema = void 0;
 var REAPEAT_CHAR = ' .';
 
@@ -53,3 +54,9 @@ var mouldParagraph = function mouldParagraph(pTags) {
 };
 
 exports.mouldParagraph = mouldParagraph;
+
+function createDummyArray(length) {
+  return Array.apply(null, Array(length)).map(function (item, index) {
+    return index;
+  });
+}

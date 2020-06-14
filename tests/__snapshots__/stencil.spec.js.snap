@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test react-placemoulder Test <Stencil /> should render base structure 1`] = `
+<Stencil>
+  <div
+    aria-disabled="true"
+    className="enable-stensil"
+    tabIndex="-1"
+  >
+    <WhatsAppCard>
+      <div
+        className="whatsapp-card"
+      >
+        <div
+          className="whatsapp-avatar stensil"
+        >
+          <img
+            className="stensil-ignore"
+          />
+        </div>
+        <div
+          className="whatsapp-chat-frame"
+        >
+          <span
+            className="whatsapp-name stensil"
+          />
+          <p
+            className="whatsapp-last-chat stensil-para"
+          />
+        </div>
+        <div
+          className="whatsapp-right-block"
+        >
+          <div
+            className="stensil"
+          />
+        </div>
+      </div>
+    </WhatsAppCard>
+  </div>
+</Stencil>
+`;
+
+exports[`Test react-placemoulder Test <StencilList /> should render empty shell if Component is not passed 1`] = `
+<StencilList
+  length={3}
+  schema={
+    Object {
+      "lastChat": 72,
+      "lastSeen": 12,
+      "name": 12,
+    }
+  }
+>
+  <Stencil>
+    <div
+      aria-disabled="true"
+      className="enable-stensil"
+      tabIndex="-1"
+    />
+  </Stencil>
+</StencilList>
+`;
+
+exports[`Test react-placemoulder Test <StencilList /> should test base structure 1`] = `
+<StencilList
+  Component={[Function]}
+  length={3}
+  schema={
+    Object {
+      "lastChat": 72,
+      "lastSeen": 12,
+      "name": 12,
+    }
+  }
+>
+  <Stencil>
+    <div
+      aria-disabled="true"
+      className="enable-stensil"
+      tabIndex="-1"
+    >
+      <WhatsAppCard
+        key="0"
+        lastChat=" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+        lastSeen=" . . . . . . . . . . . ."
+        name=" . . . . . . . . . . . ."
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              alt=" . . . . . . . . . . . ."
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            >
+               . . . . . . . . . . . .
+            </span>
+            <p
+              className="whatsapp-last-chat stensil-para"
+            >
+               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            </p>
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            >
+               . . . . . . . . . . . .
+            </div>
+          </div>
+        </div>
+      </WhatsAppCard>
+      <WhatsAppCard
+        key="1"
+        lastChat=" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+        lastSeen=" . . . . . . . . . . . ."
+        name=" . . . . . . . . . . . ."
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              alt=" . . . . . . . . . . . ."
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            >
+               . . . . . . . . . . . .
+            </span>
+            <p
+              className="whatsapp-last-chat stensil-para"
+            >
+               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            </p>
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            >
+               . . . . . . . . . . . .
+            </div>
+          </div>
+        </div>
+      </WhatsAppCard>
+      <WhatsAppCard
+        key="2"
+        lastChat=" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+        lastSeen=" . . . . . . . . . . . ."
+        name=" . . . . . . . . . . . ."
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              alt=" . . . . . . . . . . . ."
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            >
+               . . . . . . . . . . . .
+            </span>
+            <p
+              className="whatsapp-last-chat stensil-para"
+            >
+               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            </p>
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            >
+               . . . . . . . . . . . .
+            </div>
+          </div>
+        </div>
+      </WhatsAppCard>
+    </div>
+  </Stencil>
+</StencilList>
+`;
+
+exports[`Test react-placemoulder Test <StencilWrapper /> should render base structure 1`] = `
+<StencilWrapper
+  className="vertical-list"
+  repeat={3}
+>
+  <Stencil
+    className="vertical-list"
+  >
+    <div
+      aria-disabled="true"
+      className="enable-stensil vertical-list"
+      tabIndex="-1"
+    >
+      <WhatsAppCard
+        data={
+          Object {
+            "lastChat": "All Good",
+            "lastSeen": "12:30 PM",
+            "name": "Narendra",
+          }
+        }
+        key="0"
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            />
+            <p
+              className="whatsapp-last-chat stensil-para"
+            />
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            />
+          </div>
+        </div>
+      </WhatsAppCard>
+      <WhatsAppCard
+        data={
+          Object {
+            "lastChat": "All Good",
+            "lastSeen": "12:30 PM",
+            "name": "Narendra",
+          }
+        }
+        key="1"
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            />
+            <p
+              className="whatsapp-last-chat stensil-para"
+            />
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            />
+          </div>
+        </div>
+      </WhatsAppCard>
+      <WhatsAppCard
+        data={
+          Object {
+            "lastChat": "All Good",
+            "lastSeen": "12:30 PM",
+            "name": "Narendra",
+          }
+        }
+        key="2"
+        stencilLoading={true}
+      >
+        <div
+          className="whatsapp-card"
+        >
+          <div
+            className="whatsapp-avatar stensil"
+          >
+            <img
+              className="stensil-ignore"
+            />
+          </div>
+          <div
+            className="whatsapp-chat-frame"
+          >
+            <span
+              className="whatsapp-name stensil"
+            />
+            <p
+              className="whatsapp-last-chat stensil-para"
+            />
+          </div>
+          <div
+            className="whatsapp-right-block"
+          >
+            <div
+              className="stensil"
+            />
+          </div>
+        </div>
+      </WhatsAppCard>
+    </div>
+  </Stencil>
+</StencilWrapper>
+`;
