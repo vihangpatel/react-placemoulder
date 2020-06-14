@@ -1,6 +1,6 @@
  # React PlaceMoulder
 React Place Moulder uses existing component structure to render loading skeletons with very minimal code changess.
-Click here for [Live Demo](https://mrq2t.csb.app/) and for code click [Sandbox Link](https://codesandbox.io/s/stensils-mrq2t)
+Click here for [Live Demo](https://react-placemoulder.netlify.app) and for code click [Example Repo Link](https://github.com/vihangpatel/react-placemoulder-examples)
 This is more of a philosophy which can be extended to any framework in Frontend.
 
 ![Class adding Gif](docs/images/stencil.gif?raw=true "Title")
