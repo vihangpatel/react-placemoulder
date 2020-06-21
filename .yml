@@ -1,0 +1,2 @@
+- name: Slack Action
+  uses: hbfernandes/slack-action@1.0
