@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+
+- name: Slack Bot Action
+  uses: krider2010/slack-bot-action@1.0.1
